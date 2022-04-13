@@ -1,12 +1,35 @@
+<script>
+import axios from "axios";
+import { reactive } from "vue";
+
+export default {
+  setup() {
+    const advice = reactive({ advice: "", id: "" });
+
+    const loadAdvice = async () => {
+      const response = await axios.get("https://api.adviceslip.com/advice");
+      advice.advice = response.data.slip.advice;
+      advice.id = response.data.slip.id;
+      console.log(response.data.slip.advice);
+    }; //fetch advice from api
+
+    loadAdvice(); //generate the default advice
+
+    return { advice, loadAdvice };
+  },
+};
+</script>
+
 <template>
   <section class="card">
-    <h1 class="card__title">Advice #<span>117</span></h1>
+    <h1 class="card__title">
+      Advice #<span>{{ advice.id }}</span>
+    </h1>
     <p class="card__description">
-      "It is easy to sit up and take notice, what's difficult is getting up and
-      taking action"
+      {{ advice.advice }}
     </p>
     <img src="../assets/pattern-divider-mobile.svg" alt="" />
-    <button class="card__button">
+    <button @click="loadAdvice()" class="card__button">
       <img src="../assets/icon-dice.svg" alt="" />
     </button>
   </section>
