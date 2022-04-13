@@ -1,3 +1,13 @@
+<script setup>
+import AdviceGenerator from "./components/AdviceGenerator.vue";
+</script>
+
 <template>
-  <h1>a</h1>
+  <advice-generator></advice-generator>
 </template>
+
+<style>
+#app {
+  @apply bg-slate-800 min-h-screen flex justify-center items-center;
+}
+</style>
