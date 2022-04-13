@@ -6,7 +6,7 @@ import "animate.css";
 
 export default {
   setup() {
-    const advice = reactive({ advice: "", id: "" });
+    const advice = reactive({ advice: "Wait for your advice", id: "" });
 
     const loadAdvice = async () => {
       let response = await axios.get("https://api.adviceslip.com/advice");
