@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/advice-app-using-vuejs-axios-tailwind-and-composition-api-SkBiEj4Nq)
-- Live Site URL: [Add live site URL here](https://advice-app-opal.vercel.app/)
+- Solution URL: [FrontendMentor](https://www.frontendmentor.io/solutions/advice-app-using-vuejs-axios-tailwind-and-composition-api-SkBiEj4Nq)
+- Live Site URL: [advice-app.vercel](https://advice-app-opal.vercel.app/)
 
 ## My process
 
