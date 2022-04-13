@@ -7,9 +7,11 @@ export default {
     const advice = reactive({ advice: "", id: "" });
 
     const loadAdvice = async () => {
-      const response = await axios.get("https://api.adviceslip.com/advice");
+      let response = await axios.get("https://api.adviceslip.com/advice");
+
       advice.advice = response.data.slip.advice;
       advice.id = response.data.slip.id;
+
       console.log(response.data.slip.advice);
     }; //fetch advice from api
 
@@ -29,7 +31,7 @@ export default {
       {{ advice.advice }}
     </p>
     <img src="../assets/pattern-divider-mobile.svg" alt="" />
-    <button @click="loadAdvice()" class="card__button">
+    <button @click="loadAdvice" class="card__button">
       <img src="../assets/icon-dice.svg" alt="" />
     </button>
   </section>
