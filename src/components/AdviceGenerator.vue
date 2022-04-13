@@ -2,6 +2,8 @@
 import axios from "axios";
 import { reactive } from "vue";
 
+import "animate.css";
+
 export default {
   setup() {
     const advice = reactive({ advice: "", id: "" });
@@ -23,11 +25,11 @@ export default {
 </script>
 
 <template>
-  <section class="card">
-    <h1 class="card__title">
+  <section class="card animate__animated animate__pulse">
+    <h1 class="card__title animate__animated animate__zoomIn">
       Advice #<span>{{ advice.id }}</span>
     </h1>
-    <p class="card__description">
+    <p class="card__description animate__animated animate__zoomIn">
       {{ advice.advice }}
     </p>
     <img src="../assets/pattern-divider-mobile.svg" alt="" />
